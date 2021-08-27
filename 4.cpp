@@ -1,41 +1,34 @@
 //@Author MAYANK YADAV
-//C++ code to calculate area of a circle
+//C++ code to find nature of roots of a quadratic equation.
 
 #include<iostream>
 using namespace std;
 
-//There are 2 approaches to do it:
-//First Method [without including math library] :
-
-// #define PI 3.1428
-
 int main()
 {
-    cout << "Enter Radius of the Circle : ";
-    float rad;
-    cin >> rad;
-    
-    float area = PI*rad*rad;
+	cout << "A quadratic equation has the form : ax² + bx +c\n";
+	cout << "enter a : ";
+	float a;
+	cin >> a;
+	
+	cout << "enter b : ";
+	float b;
+	cin >> b;
+	
+	cout << "enter c : ";
+	float c;
+	cin >> c;
 
-    cout << "Area == " << area << endl;
+	//nature of root depends on (b² - 4ac) aka discriminant;
 
-    return 0;
-}
+	float discriminant = b*b - 4*a*c;
 
-//Second Method [by including math library]:
+	if(discriminant >= 0)
+		cout << "The equation has real roots\n";
+	else
+		cout << "The equation has imaginary roots\n";
 
-#include<math.h>
-
-int main()
-{
-	cout << "Enter Radius : ";
-	float rad;
-	cin >> rad;
-
-	float area = M_PI * pow(rad, 2); //Documentation : https://www.gnu.org/software/libc/manual/html_node/Mathematical-Constants.html
-	cout << "Area == " << area << endl;
-
-    return 0;
+	return 0;
 }
 
 

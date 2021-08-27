@@ -1,25 +1,28 @@
 //@Author MAYANK YADAV
-//C++ code to calculate area of a rectangle
+//C++ code to compare 2 numbers
 
 #include<iostream>
 using namespace std;
 
 int main()
 {
-	cout << "Enter Length of the rectangle : ";
-	float length;
-	cin >> length;
+	cout << "Enter first number : ";
+	int num1;
+	cin >> num1;
 
-	cout << "Enter Breadth of the rectangle : ";
-	float breadth;
-	cin >> breadth;
 
-	float area = length * breadth;
+	cout << "Enter second number : ";
+	int num2;
+	cin >> num2;
 
-	cout << "Area == " << area << endl;
+	if(num1 > num2)
+		cout << "First number is greater than second\n";
+	else if(num2 > num1)
+		cout << "Second number is greate than first\n";
+	else
+		cout << "Both numbers are equal\n";
 
 	return 0;
-
 }
 
 

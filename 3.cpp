@@ -1,27 +1,37 @@
 //@Author MAYANK YADAV
-// C++ code to add two numbers taken from user
+//C++ code to check if a given number is Octal number or not
 
 #include<iostream>
-
 using namespace std;
 
 int main()
 {
-    cout << "Enter First Number : " ;
-    int num1;
-    cin >> num1;
-    
-    cout << "Enter Second Number : " ;
-    int num2;
-    cin >> num2;
+	cout << "Enter a number : ";
+	int num;
+	cin >> num;
 
-    int sum = num1 + num2;
+	//all the digits shall be in range [0, 7] for octal number
 
-    cout << "Sum == "<<sum<<endl;
+	int isOctal = 1; //true
 
-    return 0;
+	while(num > 0)
+	{
+		if(num%10 > 7)
+		{
+			isOctal = 0; //flase;
+			break;
+		}
+
+		num = num/10;
+	}
+
+	if(isOctal)
+		cout << "given number is octal\n";
+	else
+		cout << "given number is not octal\n";
+
+	return 0;
 }
-
 
 
 //Connect with me @yadavmayank742 over all social media [IG, Twitter, LinkedIn etc...]

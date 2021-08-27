@@ -1,30 +1,20 @@
 //@Author MAYANK YADAV
-//C++ code to swap value of two int variables
+//C++ code to check if given year is leap or not
 
 #include<iostream>
 using namespace std;
 
 int main()
 {
-	cout << "Enter a Nuber : ";
-	int num1;
-	cin >> num1;
+	cout << "Enter Year : ";
+	int year;
+	cin >> year;
 
-	cout << "Enter another Nuber : ";
-	int num2;
-	cin >> num2;
-
-	cout << "variables before swap :\t" << num1 << "\t" << num2 << endl;
-
-	//Swap code
-	int temp = num1;
-	num1 = num2;
-	num2 = temp;
-
-	cout << "variables after swap :\t" << num1 << "\t" << num2 << endl;
-
+	if(year % 4 == 0)
+		cout << "It is leap year\n";
+	else
+		cout << "It is not a leap year\n";
 	return 0;
-
 }
 
 

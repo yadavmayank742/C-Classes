@@ -1,26 +1,21 @@
 //@Author MAYANK YADAV
-//C++ code to calculate volume of a cuboid
+// C++ code to check if a number is +ve, -ve, or 0
 
 #include<iostream>
 using namespace std;
 
 int main()
 {
-	cout << "Enter Length of the Cuboid : ";
-	float length;
-	cin >> length;
+	cout << "Enter a number : ";
+	int num;
+	cin >> num;
 
-	cout << "Enter Width of the Cuboid : ";
-	float width;
-	cin >> width;
-
-	cout << "Enter Height of the Cuboid : ";
-	float height;
-	cin >> height;
-
-	float volume = length * width * height ;
-
-	cout << "Volume == " << volume << endl;
+	if(num > 0)
+		cout << "number is positive\n";
+	else if(num < 0)
+		cout << "number is negative\n";
+	else
+		cout << "number is zero\n";
 
 	return 0;
 
