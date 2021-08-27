@@ -1,28 +1,54 @@
 //@Author MAYANK YADAV
-//C++ code to calculate average of 3 numbers
+//C++ code to find sum of square of first N natural Numbers
 
 #include<iostream>
 using namespace std;
 
 int main()
 {
-	cout << "Enter first Number : ";
-	float num1;
-	cin >> num1;
+	cout << "Enter N : ";
+	int N;
+	cin >> N;
 
-	cout << "Enter second Number : ";
-	float num2;
-	cin >> num2;
+	float sum;
+	int loopVar;
 
-	cout << "Enter third Number : ";
-	float num3;
-	cin >> num3;
+	//while loop:
+	loopVar = 1;
+	sum = 0;
+	
+	while(loopVar <= N)
+	{
+		sum += loopVar*loopVar;
+		loopVar++;
+	}
+	cout << "Sum of squares == " << sum << endl;
 
-	float average = (num1 + num2 + num3)/3 ;
 
-	cout << "Average == " << average << endl;
+	//do-while loop:
+	loopVar = 1;
+	sum = 0;
+	
+	do
+	{
+		sum += loopVar*loopVar;
+		loopVar++;
+	}while(loopVar <= N);
+	
+	cout << "Sum of squares == " << sum << endl;
+	
+	//for loop
+	sum = 0;
+	
+	for(loopVar = 1; loopVar <= N; loopVar++)
+	{
+		sum += loopVar*loopVar;
+	}
+
+	cout << "Sum of squares == " << sum << endl;
 
 	return 0;
+	
 }
 
 

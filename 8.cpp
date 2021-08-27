@@ -1,30 +1,52 @@
-//@Author MAYANK YADAV
-//C++ code to swap value of two int variables
+//@author MAYANK YADAV
+//C++ code to find factorial of a number
 
 #include<iostream>
 using namespace std;
 
 int main()
 {
-	cout << "Enter a Nuber : ";
-	int num1;
-	cin >> num1;
+	cout << "Enter Number : ";
+	int num;
+	cin >> num;
 
-	cout << "Enter another Nuber : ";
-	int num2;
-	cin >> num2;
+	int loopVar;
+	double fact;
 
-	cout << "variables before swap :\t" << num1 << "\t" << num2 << endl;
+	//while loop
+	loopVar = 1;
+	fact = 1;
 
-	//Swap code
-	int temp = num1;
-	num1 = num2;
-	num2 = temp;
+	while(loopVar <= num)
+	{
+		fact = fact * loopVar;
+		loopVar ++ ;
+	}
+	cout << "Factorial == " << fact << endl;
 
-	cout << "variables after swap :\t" << num1 << "\t" << num2 << endl;
+	//do-while loop
+	loopVar = 1;
+	fact = 1;
+
+	do
+	{
+		fact = fact * loopVar;
+		loopVar ++ ;
+	}while(loopVar <= num);
+
+	cout << "Factorial == " << fact << endl;
+
+	//for loop
+	fact = 1;
+
+	for(loopVar = 1; loopVar <= num; loopVar++)
+		fact *= loopVar;
+
+	cout << "Factorial == " << fact << endl;
+
 
 	return 0;
-
+	
 }
 
 

@@ -1,26 +1,51 @@
 //@Author MAYANK YADAV
-//C++ code to Calculate Simple Interest
+//C++ code to find sum of digits in a number
 
 #include<iostream>
 using namespace std;
 
 int main()
 {
-	cout << "Enter Priciple Amount : ";
-	float principle;
-	cin >> principle;
+	cout << "Enter a number : ";
+	int num;
+	cin >> num;
 
-	cout << "Enter Rate of Interest : ";
-	float rate;
-	cin >> rate;
+	int loopVar;
+	int sumOfDigits;
 
-	cout << "Enter Time Period : ";
-	float time;
-	cin >> time;
+	//while loop:
+	sumOfDigits = 0;
+	loopVar = num;
+	
+	while(loopVar > 0)
+	{
+		sumOfDigits += loopVar % 10; // sumOfDigits = sumOfDigits + loopVar%10;
+		loopVar /= 10; // loopVar = loopVar/10;
+	}
+	
+	cout << "Sum of digits == " << sumOfDigits << endl;
 
-	float simple_interest = (principle * time * rate) / 100;
+	//do-while loop:
+	sumOfDigits = 0;
+	loopVar = num;
+	
+	do
+	{
+		sumOfDigits += loopVar % 10; // sumOfDigits = sumOfDigits + loopVar%10;
+		loopVar /= 10; // loopVar = loopVar/10;
+	}while(loopVar > 0);
 
-	cout << "Simple Interest == " << simple_interest << endl;
+	cout << "Sum of digits == " << sumOfDigits << endl;
+
+	//for loop
+	sumOfDigits = 0;
+	
+	for(loopVar = num; loopVar > 0; loopVar /= 10)
+	{
+		sumOfDigits += loopVar % 10; // sumOfDigits = sumOfDigits + loopVar%10;
+	}
+
+	cout << "Sum of digits == " << sumOfDigits << endl;
 
 	return 0;
 

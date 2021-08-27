@@ -1,29 +1,43 @@
 //@Author MAYANK YADAV
-//C++ code to calculate volume of a cuboid
+//C++ code to print table of user's choice
 
 #include<iostream>
 using namespace std;
 
 int main()
 {
-	cout << "Enter Length of the Cuboid : ";
-	float length;
-	cin >> length;
+	cout << "Enter a number : ";
+	float num;
+	cin >> num;
 
-	cout << "Enter Width of the Cuboid : ";
-	float width;
-	cin >> width;
+	int loopVar;
 
-	cout << "Enter Height of the Cuboid : ";
-	float height;
-	cin >> height;
+	//while loop:
+	cout << "Table of " << num << " is :\n";
+	loopVar = 1;
+	while(loopVar <= 10)
+	{
+		cout << loopVar * num << endl;
+		loopVar ++ ;
+	}
 
-	float volume = length * width * height ;
+	//do-while loop:
+	cout << "Table of " << num << " is :\n";
+	loopVar = 1;
+	do
+	{
+		cout << loopVar * num << endl;
+		loopVar ++ ;
+	}while(loopVar <= 10);
 
-	cout << "Volume == " << volume << endl;
+	//for loop
+	cout << "Table of " << num << " is :\n";
+	for(loopVar = 1; loopVar <= 10; loopVar++)
+	{
+		cout << loopVar * num << endl;
+	}
 
 	return 0;
-
 }
 
 

@@ -1,5 +1,5 @@
 //@Author MAYANK YADAV
-// C++ code to add two numbers taken from user
+// C++ code to print first N even natural numbers;
 
 #include<iostream>
 
@@ -7,21 +7,43 @@ using namespace std;
 
 int main()
 {
-    cout << "Enter First Number : " ;
-    int num1;
-    cin >> num1;
-    
-    cout << "Enter Second Number : " ;
-    int num2;
-    cin >> num2;
+	cout << "Enter N : ";
+	int N;
+	cin >> N;
 
-    int sum = num1 + num2;
+	int loopVar;
 
-    cout << "Sum == "<<sum<<endl;
+	//while loop:
+	loopVar = 1;
 
-    return 0;
+	while(loopVar <= N)
+	{
+		cout << loopVar*2 << " ";
+		loopVar++ ; // loopVar = loopVar + 1; or loopVar += 1;
+	}
+	cout << endl;
+
+	//do-while loop:
+	loopVar = 1;
+	do
+	{
+		cout << loopVar*2 << " ";
+		loopVar++;
+	}while(loopVar <= N);
+
+	cout << endl;
+
+	//for loop:
+
+	for(loopVar = 1; loopVar <= N; loopVar++)
+	{
+		cout << loopVar*2 << " ";
+	}
+	cout << endl;
+
+	return 0;
+
 }
-
 
 
 //Connect with me @yadavmayank742 over all social media [IG, Twitter, LinkedIn etc...]

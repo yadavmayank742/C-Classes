@@ -1,41 +1,43 @@
 //@Author MAYANK YADAV
-//C++ code to calculate area of a circle
+//C++ code to print first N odd natural numbers
 
 #include<iostream>
 using namespace std;
 
-//There are 2 approaches to do it:
-//First Method [without including math library] :
-
-// #define PI 3.1428
-
 int main()
 {
-    cout << "Enter Radius of the Circle : ";
-    float rad;
-    cin >> rad;
-    
-    float area = PI*rad*rad;
+	cout << "Enter N : ";
+	int N;
+	cin >> N;
 
-    cout << "Area == " << area << endl;
+	int loopVar;
 
-    return 0;
-}
+	//while loop:
+	loopVar = 1;
+	while(loopVar <= N)
+	{
+		cout << loopVar*2 - 1 << " ";
+		loopVar++;
+	}
+	cout << endl;
 
-//Second Method [by including math library]:
+	//do-while loop:
+	loopVar = 1;
+	do
+	{
+		cout << loopVar*2 - 1 << " ";
+		loopVar++ ;
+	}while(loopVar <= N);
+	cout << endl;
 
-#include<math.h>
+	//for loop:
+	for(loopVar=1; loopVar <= N; loopVar++)
+	{
+		cout << loopVar*2 - 1 << " ";
+	}
+	cout << endl;
 
-int main()
-{
-	cout << "Enter Radius : ";
-	float rad;
-	cin >> rad;
-
-	float area = M_PI * pow(rad, 2); //Documentation : https://www.gnu.org/software/libc/manual/html_node/Mathematical-Constants.html
-	cout << "Area == " << area << endl;
-
-    return 0;
+	return 0;
 }
 
 

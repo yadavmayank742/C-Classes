@@ -1,22 +1,48 @@
 //@Author MAYANK YADAV
-//C++ code to calculate area of a rectangle
+//C++ code to find sum of first N natural Numbers
 
 #include<iostream>
 using namespace std;
 
 int main()
 {
-	cout << "Enter Length of the rectangle : ";
-	float length;
-	cin >> length;
+	cout << "Enter N : ";
+	int N;
+	cin >> N;
 
-	cout << "Enter Breadth of the rectangle : ";
-	float breadth;
-	cin >> breadth;
+	int loopVar;
+	float sum;
 
-	float area = length * breadth;
+	//while loop:
+	loopVar = 1;
+	sum = 0;
 
-	cout << "Area == " << area << endl;
+	while(loopVar <= N)
+	{
+		sum = sum + loopVar;
+		loopVar++;
+	}
+	cout << "Sum == " << sum << endl;
+
+	//do-while loop:
+	loopVar = 1;
+	sum = 0;
+
+	do
+	{
+		sum += loopVar; //sum = sum + loopVar;
+		loopVar++ ;
+	}while(loopVar <= N);
+	cout << "Sum == " << sum << endl;
+
+	//for loop:
+	sum = 0;
+	for(loopVar = 1; loopVar <= N; loopVar++)
+	{
+		sum += loopVar;
+	}
+	cout << "Sum == " << sum << endl;
+
 
 	return 0;
 
